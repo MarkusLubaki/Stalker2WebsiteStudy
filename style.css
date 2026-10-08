@@ -1,102 +1,121 @@
 body {
     min-height: 100vh;
     font-family: "Libre Caslon Condensed", serif;
+    background-color: rgb(41, 41, 41);
 }
 
 .main {
-    position: flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgb(255, 68. 0);
     color: green;
+}
+
+.cab {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 2vh 0;
+    text-align: center;
+}
+
+.cab a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.cab a:hover {
+    color: #2a2a2a;
+    background-color: orange;
 }
 
 h2 {
     color: green;
 }
 
-ul{
+ul {
     color: orangered;
 }
 
-.cab {
-    position: flex;
-    align-items: center;
-    justify-content: center;
+#sobre,
+#historia,
+#jogabilidade,
+#zona,
+.mutant,
+#gloss,
+#faccao,
+#conclusao,
+#conexao,
+#forms {
+    position: relative;
     text-align: center;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 4vh 8vh 8vh;
+    margin: 5vh;
 }
 
-#sobre {
-    position: flex;
-    text-align: center;
-}
-
-#historia {
-    position: flex;
-    text-align: center;
-}
-
-#jogabilidade {
-    position: flex;
-    text-align: center;
-}
-
-#zona {
-    position: flex;
-    text-align: center;
+:is(#sobre, #historia, #jogabilidade, #zona, .mutant,
+    #gloss, #faccao, #conclusao, #conexao, #forms) h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 15px;
+    white-space: nowrap;
+    background-color: #2a2a2a;
 }
 
 .mutant {
-    position: flex;
     text-align: left;
 }
 
-#gloss {
-    position: flex;
-    text-align: center;
+ul {
+    color: orangered;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
-#faccao {
-    position: flex;
-    text-align: center;
-}
-
-#conclusao {
-    position: flex;
-    text-align: center;
-}
-
-#conexao {
-    position: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-#forms {
-    position: flex;
-    text-align: center;
-    justify-content: center;
+blockquote {
+    color: green;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-td, th {
-  border: 1px solid #ddd;
-  padding: 8px;
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-tr:hover {background-color: #ddd;}
+tr:hover {
+    background-color: #ddd;
+}
 
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #ff4800;
-  color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ff4800;
+    color: white;
 }
