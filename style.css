@@ -13,6 +13,12 @@ body {
     color: green;
 }
 
+.img {
+    display: flex;
+    justify-content: center;
+    height: 35%;
+}
+
 .cab {
     display: block;
     width: 100%;
