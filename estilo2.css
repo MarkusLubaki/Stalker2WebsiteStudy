@@ -1,0 +1,284 @@
+/* CONFIGURAÇÕES GERAIS */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Libre Caslon Condensed", serif;
+
+    /* Plano de fundo */
+    background-color: rgb(41, 41, 41);
+    background-image: url("img/textura.png");
+    background-size: 300px auto;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* TÍTULO PRINCIPAL */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: green;
+}
+
+.main h1 {
+    text-shadow: 2px 2px 5px black;
+}
+
+/* BANNER */
+.img {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border: 2px solid orange;
+    border-radius: 8px;
+}
+
+/* MENU */
+.cab {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 2vh 0;
+    text-align: center;
+}
+
+.cab nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cab a {
+    display: inline-block;
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    transition: color 0.3s ease,
+                background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.cab a:hover {
+    color: #2a2a2a;
+    background-color: orange;
+    transform: translateY(-3px);
+}
+
+/* TÍTULOS */
+h2 {
+    color: green;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* SEÇÕES */
+#sobre,
+#historia,
+#jogabilidade,
+#zona,
+.mutants,
+#gloss,
+#faccao,
+#conclusao,
+#conexao,
+#forms {
+    position: relative;
+    text-align: center;
+    color: green;
+    background-color: rgba(25, 25, 25, 0.88);
+
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 4vh 8vh 8vh;
+    margin: 5vh;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+    animation: aparecer 0.8s ease both;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+#sobre:hover,
+#historia:hover,
+#jogabilidade:hover,
+#zona:hover,
+.mutants:hover,
+#gloss:hover,
+#faccao:hover,
+#conclusao:hover,
+#conexao:hover,
+#forms:hover {
+    border-color: #ff4800;
+    box-shadow: 0 5px 15px rgba(255, 72, 0, 0.2);
+}
+
+/* TÍTULOS SOBRE AS BORDAS */
+:is(#sobre, #historia, #jogabilidade, #zona, .mutants,
+    #gloss, #faccao, #conclusao, #conexao, #forms) h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 15px;
+    white-space: nowrap;
+    background-color: rgb(35, 35, 35);
+}
+
+/* LISTAS */
+ul {
+    color: orangered;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+ol {
+    color: orangered;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.mutants {
+    text-align: left;
+}
+
+/* CITAÇÕES */
+blockquote {
+    color: green;
+    margin: 50px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+    text-align: left;
+}
+
+/* TABELA */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #222;
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+td,
+th {
+    border: 1px solid #777;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #e2e2e2;
+}
+
+tr:hover {
+    background-color: #ccc;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ff4800;
+    color: white;
+}
+
+/* FORMULÁRIO */
+#forms form {
+    line-height: 2;
+}
+
+#forms input[type="text"] {
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#forms input[type="checkbox"] {
+    accent-color: #ff4800;
+    cursor: pointer;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* AJUSTES PARA TELAS MENORES */
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 1.7rem;
+    }
+
+    .cab nav {
+        gap: 5px;
+    }
+
+    #sobre,
+    #historia,
+    #jogabilidade,
+    #zona,
+    .mutants,
+    #gloss,
+    #faccao,
+    #conclusao,
+    #conexao,
+    #forms {
+        margin: 25px 12px;
+        padding: 35px 15px 25px;
+    }
+
+    blockquote {
+        margin: 25px 5px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    td,
+    th {
+        padding: 5px;
+    }
+
+    :is(#sobre, #historia, #jogabilidade, #zona, .mutants,
+        #gloss, #faccao, #conclusao, #conexao, #forms) h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ACESSIBILIDADE: REDUZ ANIMAÇÕES */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
